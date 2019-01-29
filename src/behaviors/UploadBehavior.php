@@ -250,7 +250,7 @@ class UploadBehavior extends Behavior
      */
     protected function delete($attribute, $old = false)
     {
-        return $this->getAwsHelper()->deleteObject($this->bucket, $this->getUploadPath($this->attribute));
+        return $this->getAwsHelper()->deleteObject($this->bucket, $this->getUploadPath($this->attribute, $old));
     }
 
     /**
