@@ -1,6 +1,6 @@
 <?php
 
-namespace bvb\aws;
+namespace bvb\aws\helpers;
 
 use Aws\S3\S3Client;
 use Yii;
@@ -83,5 +83,17 @@ class AwsHelper
         ]);
         
         return $result['statusCode'] == 204;
+    }
+
+    /**
+     * Returns a list of objects found in the bucket
+     * @param string $bucket
+     * @return array
+     */
+    public function listObjects($bucket)
+    {
+        return $this->_client->getIterator('ListObjects', [
+            'Bucket' => $bucket
+        ]);
     }
 }
