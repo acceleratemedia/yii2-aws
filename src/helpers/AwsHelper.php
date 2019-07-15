@@ -96,4 +96,25 @@ class AwsHelper
             'Bucket' => $bucket
         ]);
     }
+
+
+    /**
+     * Returns a pre-signed request to a file on Amazon
+     * @param string $bucket
+     * @param string $key
+     * @return string
+     */
+    public function getPresignedRequest($bucket, $key)
+    {
+        // Creating a presigned URL
+        $cmd = $this->_client->getCommand('GetObject', [
+            'Bucket' => $bucket,
+            'Key' => $key
+        ]);
+
+        $request = $this->_client->createPresignedRequest($cmd, '+10 minutes');
+
+        // Get the actual presigned-url
+        return $request->getUri();
+    }
 }

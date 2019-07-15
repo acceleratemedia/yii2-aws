@@ -8,9 +8,9 @@ use yii\base\Action;
 use yii\web\BadRequestHttpException;
 
 /**
- * ListObjects uses the AWS PHP SDK to list objects in the specified bucket
+ * GetObject uses the AWS PHP SDK to get data on a specific object
  */
-class ListObjects extends Action
+class GetObject extends Action
 {
     /**
      * The bucket we are listing objects from
