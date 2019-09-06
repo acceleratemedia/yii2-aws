@@ -3,8 +3,9 @@
     "description": "Connecting with AWS to use their S3 storage",
     "type": "yii2-extension",
     "require": {
+        "aws/aws-sdk-php": "^3.87",
         "yiisoft/yii2": "^2.0",
-        "aws/aws-sdk-php": "^3.87"
+        "yiisoft/yii2-imagine": "~2.2.0"
     },
     "authors": [
         {
