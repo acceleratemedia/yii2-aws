@@ -4,6 +4,7 @@
     "type": "yii2-extension",
     "require": {
         "aws/aws-sdk-php": "^3.87",
+        "brianvb/yii2-singleton": "@dev",
         "yiisoft/yii2": "^2.0",
         "yiisoft/yii2-imagine": "~2.2.0"
     },

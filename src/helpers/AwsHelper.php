@@ -11,6 +11,11 @@ use Yii;
 class AwsHelper
 {
     /**
+     * Implement the Singleton trait
+     */
+    use Singleton;
+
+    /**
      * Amazon S3Client class
      * @var Aws\S3\S3Client
      */
@@ -32,19 +37,6 @@ class AwsHelper
         ];
 
         $this->_client = S3Client::factory(array_merge($defaults, $args));
-    }
-
-    /**
-     * Since these are all basically stateless we only ever want to instantiate one so let's use
-     * this function to set them in the container and get them that way
-     * @return \bvb\aws\AwsHelper
-     */
-    static function getSingleton()
-    {
-        if(!Yii::$container->hasSingleton(static::class)){
-            Yii::$container->setSingleton(static::class);
-        }
-        return Yii::$container->get(static::class);
     }
 
     /**
