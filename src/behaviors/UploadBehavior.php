@@ -199,7 +199,7 @@ class UploadBehavior extends Behavior
     {
         /** @var BaseActiveRecord $model */
         $model = $this->owner;
-        $path = $this->resolvePath($this->path);
+        $path = StorageHelper::resolvePath($this->path, $media);
         $fileName = ($old === true) ? $model->getOldAttribute($attribute) : $model->$attribute;
 
         return $fileName ? $path . '/' . $fileName : null;
@@ -212,24 +212,6 @@ class UploadBehavior extends Behavior
     protected function getUploadedFile()
     {
         return $this->_file;
-    }
-
-    /**
-     * Replaces all placeholders in path variable with corresponding values.
-     */
-    protected function resolvePath($path)
-    {
-        /** @var BaseActiveRecord $model */
-        $model = $this->owner;
-        return preg_replace_callback('/{([^}]+)}/', function ($matches) use ($model) {
-            $name = $matches[1];
-            $attribute = ArrayHelper::getValue($model, $name);
-            if (is_string($attribute) || is_numeric($attribute)) {
-                return $attribute;
-            } else {
-                return $matches[0];
-            }
-        }, $path);
     }
 
     /**
