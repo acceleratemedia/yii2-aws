@@ -163,7 +163,7 @@ class UploadImageBehavior extends UploadBehavior
     {
         /** @var BaseActiveRecord $model */
         $model = $this->owner;
-        $path = $this->resolvePath($this->thumbPath);
+        $path = StorageHelper::resolvePath($this->thumbPath, $media);
         $attribute = ($old === true) ? $model->getOldAttribute($attribute) : $model->$attribute;
         $filename = $this->getThumbFileName($attribute, $profile);
         
@@ -185,7 +185,7 @@ class UploadImageBehavior extends UploadBehavior
         }
         
         if (is_file($this->getThumbUploadPath($attribute, $profile))) {
-            $url = $this->resolvePath($this->thumbUrl);
+            $url = StorageHelper::resolvePath($this->thumbUrl, $media);
             $fileName = $model->getOldAttribute($attribute);
             $thumbName = $this->getThumbFileName($fileName, $profile);
 
