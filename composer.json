@@ -1,5 +1,5 @@
 {
-    "name": "brianvb/yii2-aws",
+    "name": "acceleratemedia/yii2-aws",
     "description": "Connecting with AWS to use their S3 storage",
     "type": "yii2-extension",
     "require": {
