@@ -16,7 +16,7 @@ class S3Helper extends \yii\base\BaseObject
     /**
      * Implement the Singleton trait
      */
-    use \bvb\singleton\Singleton;
+    use \yiiutils\Singleton;
 
     /**
      * @var array Configuration passed into S3Client class to for instantiation

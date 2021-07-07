@@ -5,6 +5,7 @@
     "require": {
         "aws/aws-sdk-php": "^3.87",
         "brianvb/yii2-media": "@dev",
+        "brianvb/yii2-utils": "@dev",
         "yiisoft/yii2": "^2.0"
     },
     "authors": [
