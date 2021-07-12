@@ -1,12 +1,12 @@
 <?php
 
-namespace bvb\aws\behaviors;
+namespace accelm\aws\behaviors;
 
 /**
  * UploadImageBehavior implements the S3UploadTrait to communicate with S3 storage
  * while keeping all of the image functionality from its parent class
  */
-class UploadImageBehavior extends \bvb\media\common\behaviors\LocalStorageImageBehavior
+class UploadImageBehavior extends \accelm\media\common\behaviors\LocalStorageImageBehavior
 {
     /**
      * Use this trait to override the functions that save and delete a file to

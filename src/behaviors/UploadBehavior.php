@@ -1,12 +1,12 @@
 <?php
-namespace bvb\aws\behaviors;
+namespace accelm\aws\behaviors;
 
-use bvb\aws\AwsHelper;
+use accelm\aws\AwsHelper;
 
 /**
  * UploadBehavior uploads the file to Amazon's S3 Storage
  */
-class UploadBehavior extends \bvb\media\common\behaviors\LocalStorageBehavior
+class UploadBehavior extends \accelm\media\common\behaviors\LocalStorageBehavior
 {
     /**
      * Use this trait to override the functions that save and delete a file to

@@ -1,14 +1,14 @@
 <?php
-namespace bvb\aws\behaviors;
+namespace accelm\aws\behaviors;
 
-use bvb\aws\helpers\S3Helper;
-use bvb\media\common\helpers\StorageHelper;
+use accelm\aws\helpers\S3Helper;
+use accelm\media\common\helpers\StorageHelper;
 use Yii;
 
 /**
  * S3UploadTrait contains functions for saving and deleting a file by communicating
  * with S3 storage and is intended to override the functions of the same name in
- * \bvb\media\common\behaviors\LocalStorageBehavior
+ * \accelm\media\common\behaviors\LocalStorageBehavior
  */
 trait S3UploadTrait
 {

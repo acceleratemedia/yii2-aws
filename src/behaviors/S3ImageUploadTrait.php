@@ -1,8 +1,8 @@
 <?php
-namespace bvb\aws\behaviors;
+namespace accelm\aws\behaviors;
 
-use bvb\media\common\helpers\StorageHelper;
-use bvb\aws\helpers\S3Helper;
+use accelm\media\common\helpers\StorageHelper;
+use accelm\aws\helpers\S3Helper;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\imagine\Image;
@@ -10,7 +10,7 @@ use yii\imagine\Image;
 /**
  * S3ImageUploadTrait contains functions manipulating and creating variations
  * of images as they are uploaded. This is intended to override the functions
- * from \bvb\media\common\behaviors\LocalStorageImageBehavior
+ * from \accelm\media\common\behaviors\LocalStorageImageBehavior
  */
 trait S3ImageUploadTrait
 {

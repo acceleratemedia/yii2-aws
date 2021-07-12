@@ -1,6 +1,6 @@
 <?php
 
-namespace bvb\aws\helpers;
+namespace accelm\aws\helpers;
 
 use Aws\S3\S3Client;
 use Yii;

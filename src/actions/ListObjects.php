@@ -1,8 +1,8 @@
 <?php
 
-namespace bvb\aws\actions;
+namespace accelm\aws\actions;
 
-use bvb\aws\helpers\AwsHelper;
+use accelm\aws\helpers\AwsHelper;
 use Yii;
 use yii\base\Action;
 use yii\web\BadRequestHttpException;
