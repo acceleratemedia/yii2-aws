@@ -18,6 +18,11 @@ trait S3UploadTrait
     public $bucket;
 
     /**
+     * @var array Array of metadata passed when saving a file
+     */
+    public $uploadParams = [];
+
+    /**
      * @param string $filename
      * @return boolean
      */
@@ -47,7 +52,7 @@ trait S3UploadTrait
      */
     protected function save($file, $path)
     {
-        return S3Helper::getSingleton()->uploadObject($this->bucket, $path, $file->tempName);
+        return S3Helper::getSingleton()->uploadObject($this->bucket, $path, $file->tempName, $this->uploadParams);
     }
 
     /**

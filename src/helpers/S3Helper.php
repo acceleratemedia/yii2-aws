@@ -60,17 +60,16 @@ class S3Helper extends \yii\base\BaseObject
      * @param string $bucket
      * @param string $key
      * @param string $path
-     * @param mixed $metadata
+     * @param array $params
      * @return \Aws\Result PutObject call result with the details of uploading the file.
      */
-    public function uploadObject($bucket, $key, $path, $metadata = [])
+    public function uploadObject($bucket, $key, $path, $params = [])
     {
-        return $this->getClient()->putObject([
+        return $this->getClient()->putObject(array_merge([
             'Bucket' => $bucket,
             'Key'    => $key,
             'SourceFile'   => $path,
-            'MetaData' => $metadata
-        ]);
+        ], $params));
     }
 
 
